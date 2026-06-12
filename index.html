@@ -306,6 +306,32 @@ a{color:var(--blue);text-decoration:none;}
 .ev-note{background:#fef9f0;color:#92400e;border:1px solid #fde68a;font-size:9.5px;}
 .cal-empty{color:var(--text3);font-size:11px;text-align:center;padding:.5rem;opacity:.4;}
 
+.ib-green{margin-top:.65rem;padding:.75rem .9rem;background:var(--green-bg);border:1px solid var(--green-border);border-radius:var(--r);border-left:3px solid var(--green);}.ib-green-t{font-size:10px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.35rem;}
+
+/* Aliases: shorthand class names used in objection/decline sections */
+.sacc{border:1px solid var(--border);border-radius:var(--r-lg);margin-bottom:.55rem;overflow:hidden;box-shadow:var(--shadow);}
+.sacc-hdr{display:flex;align-items:center;gap:9px;padding:.8rem 1rem;cursor:pointer;background:var(--surface);user-select:none;}
+.sacc-hdr:hover{background:var(--surface2);}
+.sacc.open .sacc-hdr{border-bottom:1px solid var(--border);}
+.sacc-ico{width:26px;height:26px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;}
+.sacc-title{font-size:13px;font-weight:600;color:var(--navy);}
+.sacc-sub{font-size:11px;color:var(--text3);}
+.sacc-chev{margin-left:auto;color:var(--text3);font-size:10px;transition:transform .2s;}
+.sacc.open .sacc-chev{transform:rotate(180deg);}
+.sacc-body{display:none;padding:.85rem 1rem;background:var(--surface);}
+.sacc.open .sacc-body{display:block;}
+.sbubble{background:var(--surface2);border:1px solid var(--border);border-radius:var(--r);padding:.85rem 3.5rem .85rem 1rem;font-size:12px;color:var(--text2);line-height:1.85;white-space:pre-wrap;position:relative;}
+.snote{font-size:11px;color:var(--text3);margin-top:.5rem;font-style:italic;padding:.45rem .75rem;background:var(--amber-bg);border-radius:var(--r);border-left:2px solid var(--amber);}
+.slib-link{background:var(--blue-light);border:1px solid var(--blue-border);border-radius:var(--r-lg);padding:.85rem 1.1rem;margin-bottom:1rem;display:flex;align-items:center;gap:.75rem;}
+.slib-link a{color:var(--blue);font-weight:700;font-size:13px;}
+.slib-desc{font-size:11.5px;color:var(--text3);}
+.ib-amber{margin-top:.65rem;padding:.75rem .9rem;background:var(--amber-bg);border:1px solid var(--amber-border);border-radius:var(--r);border-left:3px solid var(--amber);}
+.ib-amber-t{font-size:10px;font-weight:700;color:var(--amber);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.35rem;}
+.ib-blue{margin-top:.65rem;padding:.75rem .9rem;background:var(--blue-light);border:1px solid var(--blue-border);border-radius:var(--r);border-left:3px solid var(--blue);}
+.ib-blue-t{font-size:10px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.35rem;}
+.ib-red{margin-top:.65rem;padding:.75rem .9rem;background:var(--red-bg);border:1px solid var(--red-border);border-radius:var(--r);border-left:3px solid var(--red);}
+.ib-red-t{font-size:10px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.35rem;}
+
 </style>
 </head>
 <body>
@@ -332,6 +358,7 @@ a{color:var(--blue);text-decoration:none;}
   <div class="sb-item" onclick="nav('ref-vertical')"><span>🏢</span><div class="sb-dot"></div>Vertical Playbook</div>
   <div class="sb-item" onclick="nav('ref-level')"><span>👤</span><div class="sb-dot"></div>Level Guide</div>
   <div class="sb-item" onclick="nav('ref-scripts')"><span>📝</span><div class="sb-dot"></div>Script Library</div>
+  <div class="sb-item" onclick="nav('ref-decline')"><span>🚫</span><div class="sb-dot"></div>Từ chối Brief</div>
   <div class="sb-item" onclick="nav('ref-kpi')"><span>📊</span><div class="sb-dot"></div>KPIs</div>
   <div class="sb-item" onclick="nav('ref-dodont')"><span>✅</span><div class="sb-dot"></div>Do / Don't</div>
 </nav>
@@ -815,7 +842,8 @@ Anh/chị có tiện không ạ? Mình linh hoạt theo lịch 🙏</div>
       <div class="script-note">Gợi ý mẫu — luôn bắt đầu bằng trigger mới. Không nhắc lại lần contact cũ. BD tự chọn angle phù hợp với lý do cold của khách đó.</div>
     </div>
   </div>
-</div>
+
+  </div>
 
 <!-- ═══════════════════════════════════════ REF VERTICAL ═══ -->
 <div id="page-ref-vertical" class="page">
@@ -949,6 +977,56 @@ Anh/chị có tiện không ạ? Mình linh hoạt theo lịch 🙏</div>
   <div class="info-blue" style="margin-top:0;margin-bottom:1rem">
     <div class="info-blue-title">📌 Lưu ý</div>
     <div style="font-size:12px;color:var(--text2)">Tất cả script là <b>gợi ý mẫu</b>. BD tự develop thêm dựa theo giọng văn và style của mình. Bắt buộc customize ít nhất 1 chi tiết về brand trước khi gửi.</div>
+  </div>
+  <div class="slabel" style="margin-top:0">Xử lý Objection (khi khách từ chối/do dự)</div>
+  <div class="ib-blue" style="margin-top:0;margin-bottom:.85rem">
+    <div class="ib-blue-t">📌 5 Quy tắc khi handle objection</div>
+    <div style="font-size:12px;color:var(--text2);line-height:1.85">
+      <b>① Đừng phản bác ngay</b> — Acknowledge trước ("Dạ em hiểu ạ", "Đây cũng là tình huống thường gặp ạ"). Khách cần cảm thấy được lắng nghe trước khi nghe mình giải thích.<br>
+      <b>② Phân biệt objection thật vs lời từ chối lịch sự</b> — "Để anh xem lại" có thể là từ chối khéo. Đặt 1 câu hỏi mở để test mức độ quan tâm thật trước khi đầu tư thêm effort.<br>
+      <b>③ Không tranh luận, không ép</b> — Mục tiêu là giữ cửa cho tương lai, không phải "thắng" cuộc tranh luận. Nếu khách đã quyết, tôn trọng và chuyển sang long-term nurture.<br>
+      <b>④ Reframe thay vì chối bỏ</b> — Đừng nói "không phải vậy đâu". Thay vào đó, công nhận phần đúng của khách rồi đưa thêm góc nhìn mới (ví dụ: PMAX không thay thế agency hiện tại, mà bổ sung mảng khác).<br>
+      <b>⑤ Luôn kết thúc bằng 1 action nhỏ</b> — Đừng để objection là dấu chấm hết. Đề xuất 1 bước tiếp theo nhẹ nhàng: gửi thêm case study, giữ liên lạc, hẹn quay lại đúng thời điểm.
+    </div>
+  </div>
+  <div class="slib-link"><span style="font-size:1.2rem">📊</span><div><a href="https://docs.google.com/spreadsheets/d/1c0MjTGvZiM_umT3x3YElJjjpa8q0sJwbUCaPDT9dDl8/edit?gid=1186735311#gid=1186735311" target="_blank">→ Handle Objection Library (Google Sheet)</a><div class="slib-desc">Full danh sách objection thường gặp + cách response theo từng tình huống</div></div></div>
+
+  <div class="sacc"><div class="sacc-hdr" onclick="tScript(this)"><div class="sacc-ico" style="background:#fef2f2">🛡️</div><div style="flex:1"><div class="sacc-title">"Bên mình đang làm với agency khác rồi"</div><div class="sacc-sub">Objection phổ biến nhất · Không tranh giành — mở cửa cho tương lai</div></div><span class="sacc-chev">▼</span></div>
+    <div class="sacc-body"><div style="position:relative"><div class="sbubble">Dạ em hiểu ạ, cảm ơn anh/chị đã chia sẻ.
+
+Thật ra mình không có ý định "thay thế" agency hiện tại đâu ạ — mỗi agency thường có thế mạnh riêng. PMAX hiện đang làm thêm phần [mảng cụ thể PMAX mạnh] cho một số brand bên cạnh agency chính của họ.
+
+Nếu sau này bên mình có nhu cầu mở rộng ở mảng này, hoặc cần benchmark thêm 1 phương án, anh/chị cứ nhớ đến PMAX nha. Mình vẫn sẽ gửi thêm 1 vài insight hữu ích để anh/chị tham khảo dần ạ 😊</div><button class="copy-btn" onclick="cp(this)">Copy</button></div>
+    <div class="snote">Gợi ý mẫu — không nói xấu agency khác, không cố gắng "cướp" deal. Giữ cửa mở cho long-term nurture.</div></div>
+  </div>
+
+  <div class="sacc"><div class="sacc-hdr" onclick="tScript(this)"><div class="sacc-ico" style="background:#fff7ed">💰</div><div style="flex:1"><div class="sacc-title">"Budget bên mình hạn chế / chưa có budget"</div><div class="sacc-sub">Không pitch giá ngay · Tìm hiểu thêm về timeline budget</div></div><span class="sacc-chev">▼</span></div>
+    <div class="sacc-body"><div style="position:relative"><div class="sbubble">Dạ em hiểu, đây cũng là tình huống khá phổ biến ạ.
+
+Cho em hỏi thêm — budget cho mảng này dự kiến sẽ mở vào khoảng thời gian nào ạ (Q sau, năm sau, hay đang chờ approve)? Để em note lại và follow up đúng thời điểm, tránh làm phiền anh/chị khi chưa cần thiết.
+
+Trong lúc đó, nếu anh/chị muốn, em vẫn có thể gửi thêm 1 số benchmark/case study để bên mình tham khảo và chuẩn bị trước cho budget proposal nội bộ cũng được ạ.</div><button class="copy-btn" onclick="cp(this)">Copy</button></div>
+    <div class="snote">Gợi ý mẫu — mục tiêu là lấy được timeline cụ thể để follow-up đúng lúc, không phải đóng deal ngay.</div></div>
+  </div>
+
+  <div class="sacc"><div class="sacc-hdr" onclick="tScript(this)"><div class="sacc-ico" style="background:#eff6ff">⏰</div><div style="flex:1"><div class="sacc-title">"Hiện tại chưa có nhu cầu / chưa cần"</div><div class="sacc-sub">Không ép · Để lại 1 lý do nhớ đến PMAX sau này</div></div><span class="sacc-chev">▼</span></div>
+    <div class="sacc-body"><div style="position:relative"><div class="sbubble">Dạ không sao ạ, em hiểu là mỗi giai đoạn sẽ có ưu tiên khác nhau.
+
+Để tiện hơn cho anh/chị, em có thể follow up lại sau khoảng [1–2 tháng] được không ạ — lúc đó nếu plan có thay đổi thì mình trao đổi tiếp cũng chưa muộn.
+
+Trong lúc đó em sẽ gửi thêm 1 vài thông tin/case study liên quan ngành để anh/chị tiện theo dõi, không cần phản hồi vội ạ 🙏</div><button class="copy-btn" onclick="cp(this)">Copy</button></div>
+    <div class="snote">Gợi ý mẫu — luôn xin phép 1 mốc follow-up cụ thể. Không bỏ qua, chuyển sang long-term nurture.</div></div>
+  </div>
+
+  <div class="sacc"><div class="sacc-hdr" onclick="tScript(this)"><div class="sacc-ico" style="background:#faf5ff">🤔</div><div style="flex:1"><div class="sacc-title">"Để mình xem rồi phản hồi sau" (im lặng kéo dài)</div><div class="sacc-sub">Follow-up nhẹ nhàng · Không tạo áp lực</div></div><span class="sacc-chev">▼</span></div>
+    <div class="sacc-body"><div style="position:relative"><div class="sbubble">Chào anh/chị [Tên],
+
+Em xin phép follow up nhẹ về [chủ đề/proposal] mình đã trao đổi hôm trước ạ. Không biết bên mình đã có thời gian xem qua chưa ạ?
+
+Nếu cần thêm thông tin gì để hỗ trợ quá trình xem xét nội bộ, anh/chị cứ nói em nhé — em luôn sẵn sàng hỗ trợ thêm ạ.
+
+Em cảm ơn anh/chị nhiều!</div><button class="copy-btn" onclick="cp(this)">Copy</button></div>
+    <div class="snote">Gợi ý mẫu — gửi sau 5–7 ngày im lặng. Tối đa 2 lần follow-up dạng này, sau đó chuyển sang long-term nurture.</div></div>
   </div>
   <div style="font-size:12.5px;color:var(--text2);text-align:center;padding:2rem;background:var(--surface2);border-radius:var(--r-lg);border:1px dashed var(--border2)">
     Xem đầy đủ scripts tại <a href="https://docs.google.com/spreadsheets/d/1YXeHL3bgc403Cq-Fj6e7YRullvOwn4vppXhorN4F3hk/edit?gid=198570780#gid=198570780" target="_blank">Google Sheet</a> hoặc vào <b>Viết tin nhắn</b> (menu bên trái) để xem script theo từng giai đoạn với hướng dẫn sử dụng.
@@ -1282,6 +1360,123 @@ Anh/chị có tiện không ạ? Mình linh hoạt theo lịch 🙏</div>
   </div>
 
 </div>
+<!-- ══ DECLINE BRIEF ══ -->
+<div id="page-ref-decline" class="page">
+  <div class="ph">
+    <div class="ph-eye">Tài liệu tham khảo</div>
+    <div class="ph-title">🚫 Từ chối Brief / Pitching</div>
+    <div class="ph-desc">Khi team nội bộ quyết định không proceed, dùng wording phù hợp với lý do thực tế. Tất cả là <b>gợi ý mẫu</b> — BD tự develop thêm theo giọng văn của mình, xưng <b>mình</b> hoặc <b>em</b> tùy mối quan hệ với khách.</div>
+  </div>
+
+  <div class="ib-blue" style="margin-top:0;margin-bottom:1rem">
+    <div class="ib-blue-t">📌 Nguyên tắc chung khi từ chối</div>
+    <div style="font-size:12px;color:var(--text2);line-height:1.7">
+      ✦ Luôn cảm ơn vì đã tin tưởng gửi brief / mời tham gia<br>
+      ✦ Không nói lý do quá chi tiết hoặc tiêu cực (vd: "khách trong blacklist", "ngân sách quá thấp") — diễn đạt khéo theo hướng "chưa phù hợp ở giai đoạn này"<br>
+      ✦ Luôn để ngỏ cơ hội hợp tác tương lai — giữ mối quan hệ<br>
+      ✦ Báo càng sớm càng tốt sau khi có quyết định nội bộ — đừng để khách chờ<br>
+      ✦ Log lại vào HubSpot: lý do thực tế (nội bộ) + lý do đã gửi cho khách (để tránh approach lại company/brand này theo hướng tương tự)
+    </div>
+  </div>
+
+  <div class="slabel">Chọn lý do từ chối → xem script phù hợp</div>
+
+  <!-- Reason 1: Timeline gấp -->
+  <div class="sacc">
+    <div class="sacc-hdr" onclick="tScript(this)">
+      <div class="sacc-ico" style="background:#fff7ed">⏱</div>
+      <div style="flex:1"><div class="sacc-title">Lý do nội bộ: Timeline quá gấp</div><div class="sacc-sub">Không đủ thời gian research/chuẩn bị proposal chất lượng</div></div>
+      <span class="sacc-chev">▼</span>
+    </div>
+    <div class="sacc-body">
+      <div class="ib-amber" style="margin-top:0;margin-bottom:.65rem"><div class="ib-amber-t">💡 Khi nào dùng</div><div style="font-size:12px;color:var(--text2)">Khách yêu cầu nộp proposal/pitch trong thời gian quá ngắn (vd: 2-3 ngày cho 1 pitch lớn) mà team không đủ resource để làm chất lượng. Diễn đạt theo hướng "đảm bảo chất lượng cho khách" thay vì "team mình không kịp".</div></div>
+      <div style="position:relative"><div class="sbubble">Dạ chào anh/chị [Tên],
+
+Cảm ơn anh/chị và team [Brand] đã tin tưởng gửi brief cho PMAX ạ.
+
+Sau khi team nội bộ rà soát timeline và scope của dự án, bên em nhận thấy với thời gian hiện tại, PMAX khó có thể chuẩn bị một đề xuất đủ chỉn chu và đúng tầm để đáp ứng kỳ vọng của anh/chị và team [Brand].
+
+Vì muốn đảm bảo chất lượng đề xuất tương xứng nếu có cơ hội hợp tác, nên lần này PMAX xin phép chưa thể tham gia ạ.
+
+Rất mong sẽ có dịp đồng hành cùng [Brand] trong những dự án có timeline phù hợp hơn trong thời gian tới.
+
+Em chúc anh/chị và team nhiều sức khỏe, chúc dự án triển khai thuận lợi ạ!</div><button class="copy-btn" onclick="cp(this)">Copy</button></div>
+      <div class="snote">Gợi ý mẫu — nhấn vào "đảm bảo chất lượng" thay vì nói thẳng "không kịp", giữ hình ảnh chuyên nghiệp của PMAX.</div>
+    </div>
+  </div>
+
+  <!-- Reason 2: Blacklist / công nợ / ghosting -->
+  <div class="sacc">
+    <div class="sacc-hdr" onclick="tScript(this)">
+      <div class="sacc-ico" style="background:#fef2f2">🔒</div>
+      <div style="flex:1"><div class="sacc-title">Lý do nội bộ: Khách trong blacklist PMAX</div><div class="sacc-sub">Nợ tiền, ghosting nhiều lần, hoặc lịch sử hợp tác không tốt</div></div>
+      <span class="sacc-chev">▼</span>
+    </div>
+    <div class="sacc-body">
+      <div class="ib-red" style="margin-top:0;margin-bottom:.65rem"><div class="ib-red-t">⚠️ Khi nào dùng</div><div style="font-size:12px;color:var(--text2)">Brand/công ty từng có vấn đề về thanh toán, từng ghost agency giữa chừng, hoặc bị flag nội bộ. <b>Tuyệt đối không nhắc đến lý do thật</b> với khách — luôn diễn đạt chung chung là "chưa phù hợp ở giai đoạn này" hoặc "điều kiện triển khai chưa phù hợp".</div></div>
+      <div style="position:relative"><div class="sbubble">Hi [Tên] ơi, cảm ơn [Tên] và team [Brand] đã liên hệ và gửi thông tin chào thầu đến PMAX.
+
+Sau khi PMAX trao đổi nội bộ và xem xét tổng thể đề bài cũng như một số điều kiện triển khai, bên mình nhận thấy hiện tại chưa thực sự phù hợp để tham gia ở giai đoạn này, nên xin phép chưa thể đồng hành cùng [Brand] trong dự án lần này.
+
+Hy vọng PMAX sẽ có cơ hội hợp tác cùng [Tên] và [Brand] ở những dự án phù hợp hơn trong tương lai nha. Cảm ơn [Tên] và chúc [Tên] một ngày làm việc hiệu quả!</div><button class="copy-btn" onclick="cp(this)">Copy</button></div>
+      <div class="snote">Gợi ý mẫu — "điều kiện triển khai chưa phù hợp" là cụm từ an toàn, không tiết lộ lý do thật. Giữ tone thân thiện, ngắn gọn, không giải thích thêm dù khách hỏi lại.</div>
+      <div class="ib-blue" style="margin-top:.65rem"><div class="ib-blue-t">💬 Nếu khách hỏi lại lý do cụ thể</div><div style="font-size:12px;color:var(--text2)">"Dạ hiện tại bên em chưa thể chia sẻ chi tiết được, mong [Tên] thông cảm ạ. Nếu có cơ hội phù hợp hơn trong tương lai, PMAX rất mong được trao đổi lại ạ." — Không cần giải thích thêm, escalate cho manager nếu khách tiếp tục pushback.</div></div>
+    </div>
+  </div>
+
+  <!-- Reason 3: Ngành không phù hợp / không target + timeline gấp -->
+  <div class="sacc">
+    <div class="sacc-hdr" onclick="tScript(this)">
+      <div class="sacc-ico" style="background:#faf5ff">🎯</div>
+      <div style="flex:1"><div class="sacc-title">Lý do nội bộ: Ngành không phù hợp / ngoài target</div><div class="sacc-sub">PMAX chưa có nhiều kinh nghiệm trong vertical này, có thể kèm timeline gấp</div></div>
+      <span class="sacc-chev">▼</span>
+    </div>
+    <div class="sacc-body">
+      <div class="ib-amber" style="margin-top:0;margin-bottom:.65rem"><div class="ib-amber-t">💡 Khi nào dùng</div><div style="font-size:12px;color:var(--text2)">Vertical nằm ngoài danh sách PMAX target (vd: Automotive chưa có case mạnh, ngành quá đặc thù/niche), hoặc đã từng có meeting/trao đổi nhưng team quyết định không phù hợp để theo. Phù hợp khi đã qua giai đoạn discovery meeting.</div></div>
+      <div style="position:relative"><div class="sbubble">Đại diện PMAX, em cảm ơn anh/chị và team đã chia sẻ thông tin và tin tưởng gửi brief của [Brand] cho bên em cũng như dành thời gian tham gia buổi meeting để Q&A.
+
+Sau khi team nội bộ review kỹ, bên em nhận thấy ngành hàng của [Brand] khá đặc thù, trong khi hiện tại chưa phải là nhóm ngành mà PMAX có nhiều kinh nghiệm triển khai. Đồng thời, timeline của dự án cũng khá gấp, nên bên em lo ngại sẽ khó đảm bảo mang lại hiệu quả tối ưu cho [Brand] trong thời gian yêu cầu.
+
+Vì vậy, PMAX xin phép chưa thể đồng hành cùng [Brand] trong dự án lần này.
+Rất mong sẽ có cơ hội hợp tác cùng anh/chị và [Brand] trong những dự án phù hợp hơn trong tương lai.
+
+Em chúc anh/chị nhiều sức khỏe và chúc dự án của [Brand] triển khai thật thuận lợi ạ.</div><button class="copy-btn" onclick="cp(this)">Copy</button></div>
+      <div class="snote">Gợi ý mẫu — có thể bỏ phần "timeline gấp" nếu lý do chính chỉ là ngành không phù hợp. Kết hợp 2 lý do giúp lời từ chối nghe tự nhiên và khó pushback hơn.</div>
+    </div>
+  </div>
+
+  <!-- Reason 4: Pitching fee không được đồng ý -->
+  <div class="sacc">
+    <div class="sacc-hdr" onclick="tScript(this)">
+      <div class="sacc-ico" style="background:#ecfeff">💰</div>
+      <div style="flex:1"><div class="sacc-title">Lý do nội bộ: Đề xuất pitching fee nhưng khách không đồng ý</div><div class="sacc-sub">Mùa cao điểm, không đủ resource để làm proposal miễn phí</div></div>
+      <span class="sacc-chev">▼</span>
+    </div>
+    <div class="sacc-body">
+      <div class="ib-amber" style="margin-top:0;margin-bottom:.65rem"><div class="ib-amber-t">💡 Khi nào dùng</div><div style="font-size:12px;color:var(--text2)">PMAX đã đề xuất pitching fee (do đang cao điểm, nhiều chiến dịch lớn cùng lúc) nhưng khách từ chối trả fee. Lúc này rút lui khỏi pitch, nhưng cần giữ thiện chí vì khách vẫn có thể là lead tốt trong tương lai.</div></div>
+      <div style="position:relative"><div class="sbubble">Dạ anh/chị [Tên] ơi, sau khi team trao đổi nội bộ thì team em xin phép không tham gia pitching đợt này ạ anh/chị.
+
+Do hiện tại đang là mùa cao điểm, team em đang đồng thời triển khai nhiều chiến dịch lớn nên khó có thể sắp xếp đủ nguồn lực để đầu tư đúng mức cho phần research & proposal. Nên team PMAX mới đề xuất pitching fee để có thể chủ động bố trí nguồn lực phù hợp, đảm bảo chất lượng đề xuất tương xứng với kỳ vọng của anh/chị và team [Brand].
+
+Em cũng rất tiếc khi chưa thể đồng hành cùng [Brand] trong đợt này, nhưng team em thật sự rất trân trọng cơ hội lần này, và hy vọng sẽ có dịp hợp tác cùng anh/chị trong những dự án phù hợp hơn sắp tới ạ.
+
+Chúc anh/chị và team [Brand] sẽ thành công trong campaign này ạ!</div><button class="copy-btn" onclick="cp(this)">Copy</button></div>
+      <div class="snote">Gợi ý mẫu — giải thích lý do đề xuất fee (resource, mùa cao điểm) giúp khách hiểu đây không phải PMAX "làm khó", mà là cách đảm bảo chất lượng. Vẫn giữ cửa cho dự án sau.</div>
+    </div>
+  </div>
+
+  <!-- General notes -->
+  <div class="ib-green" style="margin-top:1rem">
+    <div class="ib-green-t">✅ Sau khi gửi từ chối</div>
+    <ul class="ilist" style="color:var(--text2)">
+      <li style="display:flex;gap:6px;"><span style="color:var(--green);font-weight:700;">→</span>Log vào HubSpot: đánh dấu deal là "Closed - Declined", ghi rõ lý do thật (nội bộ) ở phần note riêng</li>
+      <li style="display:flex;gap:6px;"><span style="color:var(--green);font-weight:700;">→</span>Nếu là blacklist: note rõ để các BD khác không approach lại company này theo hướng tương tự</li>
+      <li style="display:flex;gap:6px;"><span style="color:var(--green);font-weight:700;">→</span>Nếu là "chưa phù hợp giai đoạn này" (timeline/ngành): có thể set reminder để re-approach sau 3-6 tháng nếu có case study mới phù hợp hơn</li>
+      <li style="display:flex;gap:6px;"><span style="color:var(--green);font-weight:700;">→</span>Báo lại cho manager/team lead để cùng nắm tình hình, đặc biệt nếu khách là brand lớn hoặc có khả năng pushback</li>
+    </ul>
+  </div>
+</div>
+
 </div><!-- end content -->
 </main>
 </div><!-- end app -->
@@ -1301,8 +1496,9 @@ function nav(id) {
 
 // ── TOGGLES ──
 function toggleStg(h) { h.closest('.stg').classList.toggle('open'); }
-function toggleVert(h) { h.closest('.vacc').classList.toggle('open'); }
-function toggleScriptAcc(h) { h.closest('.sacc').classList.toggle('open'); }
+function toggleVert(h) { h.closest('.vert-acc').classList.toggle('open'); }
+function toggleScriptAcc(h) { h.closest('.script-acc').classList.toggle('open'); }
+function tScript(h) { h.closest('.sacc').classList.toggle('open'); }
 function chk(item) { item.classList.toggle('checked'); }
 
 // ── COPY ──
@@ -1664,10 +1860,10 @@ function renderCal() {
   let tot = 0;
   wk.rows.forEach(r => { for (let d = 1; d <= 7; d++) tot += (r.events[d] || []).length; });
 
-  var noteColor = 'var(--blue-l)';
-  var noteBorder = 'var(--blue-b)';
-  if (wk.note.indexOf('⚠') === 0) { noteColor = 'var(--red-bg)'; noteBorder = 'var(--red-b)'; }
-  else if (wk.note.indexOf('⚡') === 0) { noteColor = 'var(--amber-bg)'; noteBorder = 'var(--amber-b)'; }
+  var noteColor = 'var(--blue-light)';
+  var noteBorder = 'var(--blue-border)';
+  if (wk.note.indexOf('⚠') === 0) { noteColor = 'var(--red-bg)'; noteBorder = 'var(--red-border)'; }
+  else if (wk.note.indexOf('⚡') === 0) { noteColor = 'var(--amber-bg)'; noteBorder = 'var(--amber-border)'; }
 
   document.getElementById('cal-summary').innerHTML =
     '<div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--r-lg);padding:.85rem 1rem;box-shadow:var(--shadow);">' +
